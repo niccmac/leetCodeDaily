@@ -9,6 +9,7 @@ const climbStairs = function (n) {
   let b = 2;
   let next;
 
+  // each loop adds number of options/routes/ways to b
   for (let i = 3; i <= n; i++) {
     next = a + b;
     a = b;
