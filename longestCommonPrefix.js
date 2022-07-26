@@ -18,3 +18,20 @@ const getLCP = (word1, word2) => {
   }
   return returnStr;
 };
+
+//Second attempt
+const longestCommonPrefix2 = (strs) => {
+  if (strs.length < 2) {
+    return strs[0];
+  }
+
+  let returnString = strs[0];
+  for (let i = 1; i < strs.length; i++) {
+    for (let k = returnString.length - 1; k > -1; k--) {
+      if (returnString[k] !== strs[i][k]) {
+        returnString = returnString.slice(0, k);
+      }
+    }
+  }
+  return returnString;
+};
