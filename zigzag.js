@@ -26,6 +26,12 @@ const convert = function (s, numRows) {
       }
     }
   }
-  let final = arraySort.toString().replaceAll(",", "");
-  return final;
+  let final = arraySort.toString();
+  let finalCommaFree = "";
+  for (let f = 0; f < final.length; f++) {
+    if (f % 2 === 0) {
+      finalCommaFree += final[f];
+    }
+  }
+  return finalCommaFree;
 };
