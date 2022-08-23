@@ -25,4 +25,16 @@ const twoSumSecond = function (nums, target) {
 
   return returnIndex;
 };
+
+const towSumThird = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    let find = target - nums[i];
+
+    let index = nums.findIndex((e) => e === find);
+
+    if (index > -1 && index !== i) {
+      return [i, index];
+    }
+  }
+};
 console.log(twoSumSecond([3, 3], 6));
